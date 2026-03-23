@@ -20,5 +20,5 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build app (skip Prisma)
+      - name: Type check (without Prisma)
         run: npx tsc --noEmit

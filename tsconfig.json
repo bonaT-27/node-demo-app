@@ -1,22 +1,13 @@
 {
+
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
     "rootDir": "src",
-  "outDir": "dist",
-  "esModuleInterop": true,
-  "strict": true
-
-
-    // Environment Settings
-    // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "module": "commonjs",
     "target": "esnext",
-    "types": [],
-    // For nodejs:
-    // "lib": ["esnext"],
-    // "types": ["node"],
-    // and npm install -D @types/node
-
+    "types": ["node"],
     // Other Outputs
     "sourceMap": true,
     "declaration": true,
@@ -36,11 +27,9 @@
 
     // Recommended Options
     "strict": true,
-    "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
     "isolatedModules": true,
-    "noUncheckedSideEffectImports": true,
-    "moduleDetection": "force",
     "skipLibCheck": true,
-  }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }
